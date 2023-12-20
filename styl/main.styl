@@ -1,0 +1,115 @@
+backColor1=lightgray
+backColor2=gray
+forwardColor=black
+menuForwardColor1=#164B69
+menuForwardColor2=yellow
+mainwidth=80%
+
+box()
+	color forwardColor
+	background-color backColor1
+	border: solid thin backColor2;
+	
+
+header
+	background-color backColor1
+	& h2
+		display inline-block
+		width 49%
+		margin-left 1%
+		padding 0.5%
+		vertical-align center
+		color forwardColor
+	& div.menu
+		display inline-flex
+		flex-wrap : no-wrap;
+		justify-content : space-evenly;
+		align-items: flex-end;
+		width 49%
+		& a
+			display inline-block
+			margin 1%
+			padding 0.5%
+			text-decoration none
+			color menuForwardColor1
+			font-weight	bold
+			font-size 23
+			text-align center
+			&.active
+				background-color backColor2
+				color menuForwardColor2
+div.gallery
+	display flex
+	flex-wrap wrap
+	width mainwidth	
+	margin 1% auto
+	justify-content center
+	& img
+		width: 49%
+		margin: 0.5% auto
+		&.head
+			display: block
+			width: 100%
+div.main
+	font-size 14px
+	display flex
+	flex-wrap no-wrap
+	width mainwidth
+	margin 0.5% auto
+	justify-content space-between
+	& div.content
+		width 30%
+		padding 1%
+		box()
+		text-align: center;
+		& img
+			margin 2%
+			width 80%
+		& p
+			color forwardColor
+	& div.content-flex
+		display flex
+		flex-direction column
+		width 30%
+		justify-content space-between
+		align-items center
+		& div.item
+			width 100%
+			box()
+			margin 1%
+			padding 1%
+			& img
+				display inline-block
+				float left
+				width 46%
+				margin 2%
+div.footer1
+	width 50%
+	text-align left
+	float left
+div.footer2
+	width 50%
+	text-align right
+	float left
+@media (max-width 800px)
+	header
+		text-align center
+		& h2
+			width 0%
+			color lightgrey
+		& div.menu
+			flex-wrap wrap
+			& a
+				width 48%
+	div.gallery
+		& img
+			width 100%
+			margin 0.5% 0
+	div.main
+		flex-wrap wrap
+		& div.content
+			width 100%
+			margin 0.5%
+		& div.content-flex
+			width 100%
+		
